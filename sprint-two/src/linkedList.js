@@ -59,3 +59,21 @@ var Node = function(value) {
 // linkedList.addToTail(5);
 // linkedList.head.value
 // linkedList.removeHead();
+
+//Failed Add code
+// var add = Node(value);
+//     var prevTail = list.tail;
+
+//     // if head and tail is null, then "value" = head and tail
+//     if (list.head === null && list.tail === null){
+//       list.head = add;
+//       list.tail = add; 
+//     } else {
+//     // else "value" = tail and prevTail.next = value 
+//       list.tail = add;
+//       prevTail.next = add.value
+//       //list.tail.next = add;
+//       //list.tail = list.tail.next;
+//     }
+//     //list.tail.value = value;
+//   };
