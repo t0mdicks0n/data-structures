@@ -12,8 +12,8 @@ var LinkedList = function() {
     } else {
 
     // if list is not empty,  
-      list.tail.next = Node(value); // then set the new tail to the value 
-      list.tail = list.tail.next; // link the old to the new tail  
+      list.tail.next = Node(value); // link the current tail to the new tail  
+      list.tail = list.tail.next; // then set the new tail to the value
     };
 
     // always assign the new tail's value. 
