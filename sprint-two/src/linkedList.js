@@ -7,12 +7,12 @@ var LinkedList = function() {
   list.addToTail = function(value) {
     // if there is no head, then the value is both head and tail 
     if (list.head === null){
-      list.head = Node(value);
+      list.head = makeNode(value)
       list.tail = list.head;
     } else {
 
     // if list is not empty,  
-      list.tail.next = Node(value); // link the current tail to the new tail  
+      list.tail.next = makeNode(value); // link the current tail to the new tail  
       list.tail = list.tail.next; // then set the new tail to the value
     };
 
@@ -41,7 +41,7 @@ var LinkedList = function() {
   return list;
 };
 
-var Node = function(value) {
+var makeNode = function(value) {
   var node = {};
 
   node.value = value;
