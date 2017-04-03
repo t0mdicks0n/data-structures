@@ -69,10 +69,8 @@ function resizeHashTable(originalHashTable, resizeDirection) {
   // create new LimitedArray with double size 
   //var newLimitedArray = LimitedArray(this._limit * 2);
   if (resizeDirection === 'increase') { 
-    console.log('increase')
     var newHashTable = new HashTable(originalHashTable._limit * 2);
   } else if (resizeDirection === 'decrease') {
-    console.log('decrease')
     var newHashTable = new HashTable(originalHashTable._limit / 2);
   }
   // newHashTable._limit = originalHashTable._limit * 2;

@@ -36,4 +36,30 @@ describe('binarySearchTree', function() {
     binarySearchTree.depthFirstLog(func);
     expect(array).to.eql([5, 2, 3]);
   });
+
+  it('should have a method named "depth" that returns an object with min and max depth', function() {
+    binarySearchTree = new BinarySearchTree(8);
+    var array = [1, 10, 2, 3, 4];
+    array.forEach(function(element, index, array) {
+      binarySearchTree.insert(element);
+    });
+    var maxD = binarySearchTree.depth().max;
+    var minD = binarySearchTree.depth().min;
+    expect(maxD).to.eql(2);
+    expect(minD).to.eql(2);
+
+  });
+
+  it('should rebalance as soon as the max depth is more than twice the minimum depth', function() {
+    binarySearchTree = new BinarySearchTree(8);
+    var array = [1, 10, 2, 3, 4];
+    array.forEach(function(element, index, array) {
+      binarySearchTree.insert(element);
+    });
+    var maxD2 = binarySearchTree.depth().max;
+    var minD2 = binarySearchTree.depth().min;
+    expect(maxD2).to.eql(2);
+    expect(minD2).to.eql(2);
+  });
+
 });
